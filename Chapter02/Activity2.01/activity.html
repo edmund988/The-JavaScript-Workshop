@@ -27,7 +27,7 @@
 </head>
 <body>
     <h1>To-Do List</h1>
-    <ol>
+    <ol id="to-do-list">
         <li>Wash Laundry</li>
         <li>Clean Silver</li>
         <li>Write Letters</li>
@@ -37,6 +37,17 @@
     </ol>
     <script>
         // JavaScript here!
+        
+        let todo = document.getElementById("to-do-list");
+        console.log(todo.children.length);
+        let newToDoListItem = document.createElement("li");
+        newToDoListItem.innerText = "Eat Dinner";
+        todo.appendChild(newToDoListItem);
+
+        todo.lastChild.style.color = "crimson";
+        console.log(todo.children.length);
+
+
     </script>
 </body>
 </html>
